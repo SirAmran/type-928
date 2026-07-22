@@ -689,7 +689,7 @@
                 <a href="learn-more.html" class="learn-more-link">Full specs & video →</a>
             </div>
 
-            <div class="pricing-card featured">
+            <div class="pricing-card">
                 <div class="sale-badge">SALE</div>
                 <div class="quantity">2 Units</div>
                 <div class="price-row"><span class="price-old">₦62,000</span><span class="price"><span class="price-currency">₦</span>52,000</span></div>
@@ -706,7 +706,7 @@
                 <a href="learn-more.html" class="learn-more-link">Full specs & video →</a>
             </div>
 
-            <div class="pricing-card">
+            <div class="pricing-card featured">
                 <div class="sale-badge">SALE</div>
                 <div class="quantity">3 Units</div>
                 <div class="price-row"><span class="price-old">₦83,000</span><span class="price"><span class="price-currency">₦</span>75,000</span></div>
@@ -731,6 +731,7 @@
         <div class="form-container">
             <form name="yoyos-order" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
                 <input type="hidden" name="form-name" value="yoyos-order">
+                <input type="hidden" name="order_reference" id="orderReference" value="">
                 <p style="display:none;">
                     <label>Don't fill this out if you're human: <input name="bot-field"></label>
                 </p>
@@ -858,6 +859,26 @@
             quantitySelect.focus();
         }
 
+        // Builds a unique reference like Type928-070721211534-K9
+        // (month, day, hour, minute, second, + 2-char random tag)
+        // The random tag guarantees uniqueness even if two orders land
+        // in the same second, so this is safe to use as a primary key.
+        function generateOrderReference() {
+            const now = new Date();
+            const pad = n => String(n).padStart(2, '0');
+            const mm = pad(now.getMonth() + 1);
+            const dd = pad(now.getDate());
+            const hh = pad(now.getHours());
+            const min = pad(now.getMinutes());
+            const ss = pad(now.getSeconds());
+            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // no confusing 0/O/1/I
+            let tag = '';
+            for (let i = 0; i < 2; i++) {
+                tag += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return 'Type928-' + mm + dd + hh + min + ss + '-' + tag;
+        }
+
         function handleSubmit(event) {
             event.preventDefault();
             const submitBtn = document.getElementById('submitBtn');
@@ -878,9 +899,14 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Processing Your Order...';
             const form = event.target;
+
+            const orderRef = generateOrderReference();
+            document.getElementById('orderReference').value = orderRef;
+
             const formData = new FormData(form);
 
             logToGoogleSheet({
+                reference: orderRef,
                 timestamp: new Date().toISOString(),
                 quantity: quantity,
                 fullname: fullname,
@@ -896,7 +922,7 @@
                 body: new URLSearchParams(formData).toString()
             })
             .then(() => {
-                showConfirmationModal(quantity, phone);
+                showConfirmationModal(quantity, phone, orderRef);
                 form.reset();
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Complete Order';
@@ -909,8 +935,7 @@
             });
         }
 
-        function showConfirmationModal(quantity, phone) {
-            const ref = 'YD-' + Date.now().toString().slice(-6);
+        function showConfirmationModal(quantity, phone, ref) {
             document.getElementById('modalRef').textContent = ref;
             document.getElementById('modalQuantity').textContent = quantity;
             document.getElementById('modalPhone').textContent = phone;
