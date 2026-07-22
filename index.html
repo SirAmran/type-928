@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOYOS DEVICES | Type 928 Nationwide Self-Defense Delivery</title>
+    <meta name="description" content="The Type 928 delivers powerful stun-gun protection with a built-in LED flashlight. Free pepper spray with every order. Nationwide delivery across Nigeria, pay on arrival.">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <meta property="og:title" content="YOYOS DEVICES | Nationwide Shipping Across Nigeria">
+    <meta property="og:description" content="Type 928 self-defense device with free pepper spray. Order online, pay on delivery.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #ffffff;
+            --surface: #f5f6f8;
+            --surface-2: #eef0f3;
+            --ink: #14171c;
+            --ink-soft: #5b6270;
+            --navy: #10192b;
+            --navy-soft: #1c2740;
+            --accent: #c8440f;
+            --accent-soft: #fdeee7;
+            --success: #16794f;
+            --success-soft: #e8f6ef;
+            --border: #e3e5ea;
+            --font-display: 'Sora', 'Inter', sans-serif;
+            --font-body: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img { max-width: 100%; display: block; }
+
+        a:focus-visible, button:focus-visible, input:focus-visible,
+        textarea:focus-visible, select:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        /* Reveal-on-scroll */
+        .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.in-view { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s ease;
+        }
+        header.scrolled { box-shadow: 0 8px 24px rgba(16,25,43,0.08); }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 40px; height: 40px; object-fit: contain; border-radius: 8px; }
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            color: var(--navy);
+        }
+
+        nav { display: flex; gap: 32px; align-items: center; }
+        nav a {
+            color: var(--ink-soft);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.25s;
+        }
+        nav a:hover, nav a:focus-visible { color: var(--accent); }
+        nav a.nav-cta {
+            background: var(--navy);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+        nav a.nav-cta:hover { background: var(--accent); color: #fff; }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            width: 42px;
+            height: 42px;
+            color: var(--navy);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                gap: 0;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 12px 24px rgba(16,25,43,0.08);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            nav.open { max-height: 320px; }
+            nav a { padding: 16px 24px; width: 100%; border-top: 1px solid var(--border); border-radius: 0 !important; }
+            .nav-toggle { display: block; }
+        }
+
+        /* Marquee — now the first thing below the header */
+        .marquee-section { padding: 22px 0; background: var(--surface); border-bottom: 1px solid var(--border); }
+        .marquee-wrap {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            overflow: hidden;
+        }
+        .marquee-wrap::before, .marquee-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 70px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .marquee-wrap::before { left: 0; background: linear-gradient(90deg, var(--surface), transparent); }
+        .marquee-wrap::after { right: 0; background: linear-gradient(270deg, var(--surface), transparent); }
+
+        .marquee-track {
+            display: flex;
+            gap: 18px;
+            width: max-content;
+            animation: scrollLeft 30s linear infinite;
+        }
+        .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+
+        .marquee-track img {
+            height: 180px;
+            width: auto;
+            border-radius: 12px;
+            background: #fff;
+            border: 1px solid var(--border);
+            box-shadow: 0 6px 18px rgba(16,25,43,0.08);
+            transition: transform 0.3s ease;
+        }
+        .marquee-track img:hover { transform: scale(1.04); }
+
+        @keyframes scrollLeft {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+        @media (max-width: 768px) { .marquee-track img { height: 130px; } }
+
+        /* Hero */
+        .hero { max-width: 1000px; margin: 0 auto; padding: 56px 20px 40px; text-align: center; }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            padding: 8px 16px;
+            border-radius: 100px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -1px;
+            color: var(--navy);
+            margin-bottom: 18px;
+        }
+        .hero-content h1 span { color: var(--accent); }
+
+        .hero-content > p.subhead {
+            font-size: 18px;
+            color: var(--ink-soft);
+            margin: 0 auto 26px;
+            max-width: 580px;
+        }
+
+        .highlights { display: flex; gap: 12px; margin: 24px auto; flex-wrap: wrap; justify-content: center; }
+
+        .highlight {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--navy);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .highlight:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(16,25,43,0.08); }
+
+        .trust-inline { margin: 24px auto 0; display: flex; flex-direction: column; gap: 8px; align-items: center; }
+        .trust-inline span { color: var(--success); font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+
+        .hero-ctas { display: flex; gap: 16px; margin-top: 30px; flex-wrap: wrap; justify-content: center; }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+        .btn-primary:hover { background: #a83a0c; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(200,68,15,0.25); }
+
+        .btn-secondary {
+            background: #fff;
+            color: var(--navy);
+            border: 1.5px solid var(--border);
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.25s;
+        }
+        .btn-secondary:hover { border-color: var(--navy); transform: translateY(-2px); }
+
+        /* Why Buy / Safety section */
+        .why-buy {
+            background: var(--navy);
+            padding: 64px 20px;
+            margin: 0;
+        }
+        .why-buy-inner { max-width: 900px; margin: 0 auto; text-align: center; color: #fff; }
+        .why-buy h2 { font-family: var(--font-display); font-size: 30px; font-weight: 800; margin-bottom: 18px; }
+        .why-buy p { color: #c3c9d6; font-size: 16px; line-height: 1.8; margin-bottom: 16px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .why-buy-stats { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+        .why-stat {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 14px;
+            padding: 22px 26px;
+            min-width: 180px;
+        }
+        .why-stat .num { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--accent); }
+        .why-stat .label { font-size: 13px; color: #c3c9d6; margin-top: 6px; }
+
+        /* Trust Section */
+        .trust-section { background: var(--surface); padding: 44px 20px; }
+        .trust-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .trust-badge { display: flex; flex-direction: column; align-items: center; gap: 12px; transition: transform 0.25s ease; }
+        .trust-badge:hover { transform: translateY(-4px); }
+        .trust-icon { font-size: 32px; }
+        .trust-badge h3 { font-size: 16px; color: var(--navy); font-family: var(--font-display); }
+        .trust-badge p { color: var(--ink-soft); font-size: 13.5px; }
+
+        /* Section headings */
+        .features h2, .pricing h2, .specs h2, .order-section h2 { font-family: var(--font-display); color: var(--navy); }
+
+        /* Features */
+        .features { max-width: 1200px; margin: 70px auto; padding: 0 20px; }
+        .features h2 { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+        .section-sub { text-align: center; color: var(--ink-soft); margin-bottom: 44px; font-size: 15px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
+
+        .feature-card {
+            background: #fff;
+            padding: 28px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            transition: all 0.25s;
+        }
+        .feature-card:hover { border-color: var(--accent); box-shadow: 0 10px 30px rgba(200,68,15,0.1); transform: translateY(-4px); }
+        .feature-card h3 { color: var(--navy); margin-bottom: 10px; font-size: 18px; }
+        .feature-card p { color: var(--ink-soft); font-size: 14px; }
+
+        .features-cta { text-align: center; margin-top: 40px; }
+
+        /* Specs */
+        .specs { background: var(--surface); padding: 60px 20px; margin: 60px 0; }
+        .specs-content { max-width: 1200px; margin: 0 auto; }
+        .specs h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; text-align: center; }
+        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 32px; }
+        .spec-item { background: #fff; padding: 20px; border-radius: 10px; border: 1px solid var(--border); border-left: 3px solid var(--accent); transition: transform 0.25s ease; }
+        .spec-item:hover { transform: translateY(-3px); }
+        .spec-label { color: var(--accent); font-weight: 700; margin-bottom: 6px; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.8px; }
+        .spec-value { font-size: 18px; font-weight: 700; color: var(--navy); }
+        .specs-cta { text-align: center; margin-top: 32px; }
+
+        /* Pricing */
+        .pricing { max-width: 1200px; margin: 70px auto; padding: 0 20px; }
+        .pricing h2 { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 10px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 26px; margin-top: 40px; }
+
+        .pricing-card {
+            background: #fff;
+            padding: 36px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border);
+            text-align: center;
+            transition: all 0.25s;
+            position: relative;
+        }
+        .pricing-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(16,25,43,0.08); }
+        .pricing-card.featured { border-color: var(--accent); box-shadow: 0 16px 36px rgba(200,68,15,0.12); }
+        .pricing-card.featured::before {
+            content: "BEST VALUE";
+            position: absolute;
+            top: -14px; left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #fff;
+            padding: 5px 18px;
+            border-radius: 20px;
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+        }
+
+        .sale-badge {
+            position: absolute;
+            top: 16px; right: 16px;
+            background: var(--success);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .quantity { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+        .price-row { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin: 16px 0 6px; }
+        .price-old { font-size: 18px; color: var(--ink-soft); text-decoration: line-through; }
+        .price { font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--ink); }
+        .price-currency { font-size: 17px; color: var(--ink-soft); }
+        .save-line { color: var(--success); font-weight: 700; font-size: 13px; margin-bottom: 12px; }
+
+        .offer {
+            background: var(--success-soft);
+            border: 1px solid var(--success);
+            color: var(--success);
+            padding: 10px;
+            border-radius: 8px;
+            margin: 14px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+        }
+
+        .pricing-features { text-align: left; margin: 22px 0; list-style: none; }
+        .pricing-features li { padding: 11px 0; border-bottom: 1px solid var(--border); color: var(--ink-soft); font-size: 13.5px; font-weight: 500; }
+        .pricing-features li:last-child { border-bottom: none; }
+        .pricing-features li::before { content: "✓ "; color: var(--success); font-weight: 700; margin-right: 8px; }
+
+        .btn-order {
+            width: 100%;
+            padding: 15px;
+            background: var(--navy);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s;
+            margin-top: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        .btn-order:hover { background: var(--accent); }
+
+        .learn-more-link {
+            display: block;
+            margin-top: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .learn-more-link:hover { text-decoration: underline; }
+
+        /* Order Form */
+        .order-section {
+            max-width: 1400px;
+            margin: 80px auto;
+            padding: 60px 20px;
+            background: var(--surface);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+        .order-section h2 { font-size: 36px; font-weight: 800; margin-bottom: 8px; text-align: center; }
+        .order-subtitle { text-align: center; color: var(--ink-soft); margin-bottom: 44px; font-size: 15px; }
+
+        .form-container { max-width: 760px; margin: 0 auto; }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; margin-bottom: 9px; font-weight: 700; color: var(--navy); font-size: 14.5px; }
+        .form-group label .required { color: var(--accent); }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 15px;
+            background: #fff;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            color: var(--ink);
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.25s;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; font-family: inherit; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: #a3a9b5; }
+
+        .form-note {
+            background: var(--accent-soft);
+            border: 1px solid #f0c6ab;
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 13.5px;
+            color: #7a3308;
+        }
+        .form-note strong { color: var(--navy); }
+
+        .confirm-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: #fff;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .confirm-row input[type="checkbox"] { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+        .confirm-row label { font-size: 13.5px; color: var(--ink-soft); font-weight: 500; line-height: 1.5; }
+        .confirm-row label strong { color: var(--navy); }
+
+        .btn-submit {
+            width: 100%;
+            padding: 17px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 15.5px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.25s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-submit:hover { background: #a83a0c; transform: translateY(-2px); }
+        .btn-submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+        /* Modal */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(16,25,43,0.55); backdrop-filter: blur(4px); }
+        .modal.show { display: flex; justify-content: center; align-items: center; }
+        .modal-content { background: #fff; padding: 48px 36px; border-radius: 20px; text-align: center; max-width: 480px; width: calc(100% - 40px); box-shadow: 0 24px 60px rgba(16,25,43,0.25); animation: popIn 0.3s ease; }
+        @keyframes popIn { from { opacity:0; transform: scale(0.94); } to { opacity:1; transform: scale(1); } }
+        .modal-success-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--success-soft); color: var(--success); font-size: 32px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .modal-content h3 { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+        .modal-content p { color: var(--ink-soft); margin-bottom: 10px; line-height: 1.7; font-size: 14.5px; }
+        .modal-details { background: var(--surface); padding: 18px; border-radius: 12px; margin: 26px 0; text-align: left; border: 1px solid var(--border); }
+        .detail-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-label { color: var(--ink-soft); font-weight: 500; }
+        .detail-value { color: var(--navy); font-weight: 700; }
+        .btn-close-modal { background: var(--navy); color: #fff; padding: 13px 36px; border: none; border-radius: 10px; font-weight: 700; font-size: 14.5px; cursor: pointer; margin-top: 8px; }
+        .btn-close-modal:hover { background: var(--accent); }
+
+        @media (max-width: 768px) {
+            .order-section { padding: 44px 18px; margin: 60px auto; }
+            .order-section h2 { font-size: 27px; }
+            .form-row { grid-template-columns: 1fr; gap: 20px; }
+            .form-group input, .form-group textarea, .form-group select { padding: 14px; font-size: 16px; }
+            .hero-content h1 { font-size: 32px; }
+            .features h2, .pricing h2, .specs h2, .order-section h2, .why-buy h2 { font-size: 26px; }
+            .price { font-size: 28px; }
+        }
+
+        /* Footer */
+        footer { background: var(--navy); padding: 34px 20px; text-align: center; color: #aab2c4; margin-top: 60px; }
+        footer p { font-size: 13.5px; }
+        footer strong { color: #fff; }
+    </style>
+</head>
+<body>
+    <header id="siteHeader">
+        <div class="header-content">
+            <a href="#top" class="logo-section" aria-label="YOYOS DEVICES home">
+                <img src="logo.png" alt="YOYOS DEVICES logo" class="logo-img">
+                <div class="logo-text">YOYOS DEVICES</div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+            <nav id="mainNav">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="learn-more.html">Learn More</a>
+                <a href="#order" class="nav-cta">Order</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Marquee moved right under the header -->
+    <div class="marquee-section">
+        <div class="marquee-wrap" aria-label="Product photos">
+            <div class="marquee-track" id="marqueeTrack">
+                <img src="images/stungun-02.jpg" alt="Type 928 self-defense device close-up">
+                <img src="images/pepperspray-01.jpg" alt="Included pepper spray canister">
+                <img src="images/stungun-03.jpg" alt="Type 928 device with belt pouch">
+                <img src="images/full-kit.jpg" alt="Full kit including charger and case">
+                <img src="images/stungun-composite.jpg" alt="Type 928 device multiple angles">
+                <img src="images/pepperspray-box.jpg" alt="Pepper spray in retail box">
+                <img src="images/stungun-04.jpg" alt="Type 928 device with packaging">
+                <img src="images/pepperspray-02.jpg" alt="Pepper spray canister detail">
+                <img src="images/stungun-01.jpg" alt="Type 928 device studio shot">
+                <img src="images/pepperspray-03.jpg" alt="Pepper spray canister white background">
+            </div>
+        </div>
+    </div>
+
+    <section class="hero" id="top">
+        <div class="hero-content">
+            <div class="eyebrow">🚚 Nationwide delivery across Nigeria</div>
+            <h1>Nationwide Shipping. <span>Real Protection.</span></h1>
+            <p class="subhead">The Type 928 delivers powerful stun protection with a built-in LED flashlight — ordered online, delivered to your door anywhere in Nigeria, and paid for only when it arrives.</p>
+
+            <div class="highlights">
+                <div class="highlight"><span>⚡</span><span>High-voltage output</span></div>
+                <div class="highlight"><span>💡</span><span>LED flashlight</span></div>
+                <div class="highlight"><span>🔋</span><span>Rechargeable</span></div>
+                <div class="highlight"><span>🛡️</span><span>Safety switch</span></div>
+            </div>
+
+            <div class="trust-inline">
+                <span>✓ FREE pepper spray with every order</span>
+                <span>✓ 3–5 day nationwide delivery</span>
+                <span>✓ Pay on delivery — no card needed</span>
+            </div>
+
+            <div class="hero-ctas">
+                <button class="btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Now</button>
+                <a href="learn-more.html" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-buy reveal">
+        <div class="why-buy-inner">
+            <h2>Why More Nigerians Are Carrying Protection Today</h2>
+            <p>Break-ins, street robbery, and late-night attacks are a growing worry for families, students, and business owners across Nigeria. Waiting for help to arrive isn't always an option — the seconds before it does are the ones that matter most.</p>
+            <p>A dependable, easy-to-carry device gives you a fighting chance in those seconds: something small enough for a bag or pocket, powerful enough to create distance, and simple enough to use under pressure — without needing a licence or training most other tools require.</p>
+            <div class="why-buy-stats">
+                <div class="why-stat"><div class="num">3–5</div><div class="label">Days to your door, nationwide</div></div>
+                <div class="why-stat"><div class="num">2×</div><div class="label">Protection: stun device + pepper spray</div></div>
+                <div class="why-stat"><div class="num">0</div><div class="label">Upfront payment — pay on delivery</div></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-section">
+        <div class="trust-content">
+            <div class="trust-badge"><div class="trust-icon">✈️</div><h3>Fast Delivery</h3><p>3–5 days nationwide across Nigeria</p></div>
+            <div class="trust-badge"><div class="trust-icon">🎁</div><h3>Free Pepper Spray</h3><p>Included with every purchase automatically</p></div>
+            <div class="trust-badge"><div class="trust-icon">💳</div><h3>Collect on Delivery</h3><p>Pay when it arrives at your doorstep</p></div>
+            <div class="trust-badge"><div class="trust-icon">🔒</div><h3>Secure & Discreet</h3><p>Professional packaging and private delivery</p></div>
+        </div>
+    </div>
+
+    <section class="features reveal" id="features">
+        <h2>Why Choose Type 928?</h2>
+        <p class="section-sub">Built for everyday carry, engineered for real situations.</p>
+        <div class="features-grid">
+            <div class="feature-card"><h3>⚡ Serious Power</h3><p>High-voltage output designed to stop a threat instantly. Reliable protection when you need it most.</p></div>
+            <div class="feature-card"><h3>💡 Dual Purpose</h3><p>Built-in LED flashlight with a long lifespan. Light up dark areas while carrying a defensive tool.</p></div>
+            <div class="feature-card"><h3>🔋 Always Ready</h3><p>Rechargeable battery, full charge in 2–4 hours. Never caught unprepared.</p></div>
+            <div class="feature-card"><h3>🎯 Compact Design</h3><p>Lightweight and portable. Fits easily in a bag, purse, or pocket.</p></div>
+            <div class="feature-card"><h3>🛡️ Safety First</h3><p>Dual safety mechanism prevents accidental discharge. Anti-slip ergonomic grip.</p></div>
+            <div class="feature-card"><h3>✓ Trusted Build</h3><p>Durable aviation-grade materials used by security-conscious buyers nationwide.</p></div>
+        </div>
+        <div class="features-cta">
+            <a href="learn-more.html" class="btn-secondary">See Full Specifications & Video →</a>
+        </div>
+    </section>
+
+    <section class="specs reveal">
+        <div class="specs-content">
+            <h2>Type 928 Key Specifications</h2>
+            <p class="section-sub">Full breakdown, tutorial video, and FAQ on the Learn More page.</p>
+            <div class="specs-grid">
+                <div class="spec-item"><div class="spec-label">Built-in Flashlight</div><div class="spec-value">Yes — LED</div></div>
+                <div class="spec-item"><div class="spec-label">Battery Type</div><div class="spec-value">Rechargeable</div></div>
+                <div class="spec-item"><div class="spec-label">Charging Time</div><div class="spec-value">2–4 Hours</div></div>
+                <div class="spec-item"><div class="spec-label">Size</div><div class="spec-value">170×50×30mm</div></div>
+                <div class="spec-item"><div class="spec-label">Weight</div><div class="spec-value">200g</div></div>
+                <div class="spec-item"><div class="spec-label">Material</div><div class="spec-value">Aviation Aluminum</div></div>
+                <div class="spec-item"><div class="spec-label">Safety Features</div><div class="spec-value">Dual Switch</div></div>
+                <div class="spec-item"><div class="spec-label">Included</div><div class="spec-value">Charger + Pouch</div></div>
+            </div>
+            <div class="specs-cta">
+                <a href="learn-more.html" class="learn-more-link">View full specifications →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing reveal" id="pricing">
+        <h2>Simple, Transparent Pricing</h2>
+        <p class="section-sub">Every package ships free nationwide. Pay only when it arrives.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="sale-badge">SALE</div>
+                <div class="quantity">1 Unit</div>
+                <div class="price-row"><span class="price-old">₦35,000</span><span class="price"><span class="price-currency">₦</span>28,000</span></div>
+                <div class="save-line">You save ₦7,000</div>
+                <div class="offer">✓ FREE Pepper Spray Included</div>
+                <ul class="pricing-features">
+                    <li>Type 928 Stun Gun</li>
+                    <li>Premium Pepper Spray</li>
+                    <li>Free Delivery (3–5 days)</li>
+                    <li>Collect on Delivery</li>
+                    <li>Professional Packaging</li>
+                </ul>
+                <button class="btn-order" onclick="scrollToOrder('1')">Order Now</button>
+                <a href="learn-more.html" class="learn-more-link">Full specs & video →</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="sale-badge">SALE</div>
+                <div class="quantity">2 Units</div>
+                <div class="price-row"><span class="price-old">₦62,000</span><span class="price"><span class="price-currency">₦</span>52,000</span></div>
+                <div class="save-line">You save ₦10,000</div>
+                <div class="offer">✓ FREE Pepper Spray × 2</div>
+                <ul class="pricing-features">
+                    <li>Type 928 Stun Gun × 2</li>
+                    <li>Premium Pepper Spray × 2</li>
+                    <li>Free Delivery (3–5 days)</li>
+                    <li>Collect on Delivery</li>
+                    <li>Professional Packaging</li>
+                </ul>
+                <button class="btn-order" onclick="scrollToOrder('2')">Order Now</button>
+                <a href="learn-more.html" class="learn-more-link">Full specs & video →</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="sale-badge">SALE</div>
+                <div class="quantity">3 Units</div>
+                <div class="price-row"><span class="price-old">₦83,000</span><span class="price"><span class="price-currency">₦</span>75,000</span></div>
+                <div class="save-line">You save ₦8,000</div>
+                <div class="offer">✓ FREE Pepper Spray × 3</div>
+                <ul class="pricing-features">
+                    <li>Type 928 Stun Gun × 3</li>
+                    <li>Premium Pepper Spray × 3</li>
+                    <li>Free Delivery (3–5 days)</li>
+                    <li>Collect on Delivery</li>
+                    <li>Professional Packaging</li>
+                </ul>
+                <button class="btn-order" onclick="scrollToOrder('3')">Order Now</button>
+                <a href="learn-more.html" class="learn-more-link">Full specs & video →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-section reveal" id="order">
+        <h2>Secure Your Order</h2>
+        <p class="order-subtitle">Complete the form below. We'll contact you shortly to confirm delivery details.</p>
+        <div class="form-container">
+            <form name="yoyos-order" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+                <input type="hidden" name="form-name" value="yoyos-order">
+                <p style="display:none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                </p>
+
+                <div class="form-group">
+                    <label for="quantity">Select Your Package <span class="required">*</span></label>
+                    <select id="quantity" name="quantity" required>
+                        <option value="">Choose package quantity...</option>
+                        <option value="1 Unit - ₦28,000">1 Unit - ₦28,000 (includes free pepper spray)</option>
+                        <option value="2 Units - ₦52,000">2 Units - ₦52,000 (includes 2 free pepper sprays) ⭐ Best value</option>
+                        <option value="3 Units - ₦75,000">3 Units - ₦75,000 (includes 3 free pepper sprays)</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullname">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="08012345678" required autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number (Optional)</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="08087654321 (for order updates)">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Delivery Address <span class="required">*</span></label>
+                    <textarea id="address" name="address" placeholder="Include: street, area/neighborhood, city, state. Example: 123 Main Street, Fagge, Kano, Kano State" required autocomplete="street-address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Requests or Gate Code</label>
+                    <textarea id="message" name="message" placeholder="Any special instructions for delivery? (e.g., gate code, best time to deliver, apartment number)"></textarea>
+                </div>
+
+                <div class="form-note">
+                    ⚠️ <strong>Important:</strong> Submitting this form places a real order. Our team will contact you by phone or WhatsApp to confirm delivery. Payment is on delivery (COD).
+                </div>
+
+                <div class="form-note" style="background: var(--surface); border-color: var(--border); color: var(--ink-soft);">
+                    🔒 <strong>Your privacy:</strong> The details you provide are used only to process and deliver this order. We do not sell or share your information with third parties.
+                </div>
+
+                <div class="confirm-row">
+                    <input type="checkbox" id="confirmOrder" name="confirmOrder" required>
+                    <label for="confirmOrder"><strong>I confirm this is a genuine order</strong> and the details above (name, phone, and address) are accurate. I understand a team member will contact me to finalize delivery.</label>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">Complete Order</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="confirmationModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <div class="modal-success-icon" aria-hidden="true">✓</div>
+            <h3 id="modalTitle">Order Received</h3>
+            <p>Thanks — your order has been received and is being processed.</p>
+            <p style="font-weight: 700; color: var(--navy); margin: 16px 0;">Our team will contact you within 24 hours to confirm delivery.</p>
+
+            <div class="modal-details">
+                <div class="detail-row"><span class="detail-label">Order reference</span><span class="detail-value" id="modalRef">-</span></div>
+                <div class="detail-row"><span class="detail-label">Package</span><span class="detail-value" id="modalQuantity">-</span></div>
+                <div class="detail-row"><span class="detail-label">Contact number</span><span class="detail-value" id="modalPhone">-</span></div>
+                <div class="detail-row"><span class="detail-label">Delivery time</span><span class="detail-value">3–5 days</span></div>
+                <div class="detail-row"><span class="detail-label">Payment</span><span class="detail-value">Collect on delivery</span></div>
+            </div>
+
+            <div style="background: var(--success-soft); border: 1px solid var(--success); padding: 14px; border-radius: 10px; margin-bottom: 20px; font-size: 13.5px; color: var(--navy);">
+                ✓ Keep your phone reachable — we'll call or WhatsApp you to confirm your address before dispatch.
+            </div>
+
+            <button class="btn-close-modal" onclick="closeModal()">Done</button>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>YOYOS DEVICES</strong> &copy; 2026. All rights reserved. Premium personal security solutions.</p>
+        <p style="margin-top: 12px; font-size: 12.5px;">Email: yoyosdevices@gmail.com | Available to serve you 24/7</p>
+    </footer>
+
+    <script>
+        // Paste your Google Apps Script Web App URL here to log orders to a Google Sheet.
+        // Leave blank to skip — orders will still work via Netlify Forms either way.
+        const GOOGLE_SHEET_URL = '';
+
+        function logToGoogleSheet(data) {
+            if (!GOOGLE_SHEET_URL) return;
+            fetch(GOOGLE_SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(data).toString()
+            }).catch(err => console.error('Google Sheet log failed:', err));
+        }
+
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 8);
+        });
+
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.getElementById('mainNav');
+        navToggle.addEventListener('click', function () {
+            const isOpen = mainNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        function scrollToOrder(quantity) {
+            const quantitySelect = document.getElementById('quantity');
+            const quantityMap = { '1': '1 Unit - ₦28,000', '2': '2 Units - ₦52,000', '3': '3 Units - ₦75,000' };
+            quantitySelect.value = quantityMap[quantity];
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+            quantitySelect.focus();
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const quantity = document.getElementById('quantity').value;
+            const fullname = document.getElementById('fullname').value;
+            const phone = document.getElementById('phone').value;
+            const confirmed = document.getElementById('confirmOrder').checked;
+
+            if (!quantity || !fullname || !phone || !document.getElementById('address').value) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            if (!confirmed) {
+                alert('Please confirm this is a genuine order before submitting.');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing Your Order...';
+            const form = event.target;
+            const formData = new FormData(form);
+
+            logToGoogleSheet({
+                timestamp: new Date().toISOString(),
+                quantity: quantity,
+                fullname: fullname,
+                phone: phone,
+                whatsapp: formData.get('whatsapp') || '',
+                address: formData.get('address') || '',
+                message: formData.get('message') || ''
+            });
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                showConfirmationModal(quantity, phone);
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Complete Order';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error processing your order. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Complete Order';
+            });
+        }
+
+        function showConfirmationModal(quantity, phone) {
+            const ref = 'YD-' + Date.now().toString().slice(-6);
+            document.getElementById('modalRef').textContent = ref;
+            document.getElementById('modalQuantity').textContent = quantity;
+            document.getElementById('modalPhone').textContent = phone;
+            document.getElementById('confirmationModal').classList.add('show');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeModal() {
+            document.getElementById('confirmationModal').classList.remove('show');
+            setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 300);
+        }
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('confirmationModal');
+            if (event.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Duplicate marquee images for a seamless infinite loop
+        const track = document.getElementById('marqueeTrack');
+        track.innerHTML += track.innerHTML;
+
+        // Scroll-reveal animations
+        const revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(el => io.observe(el));
+        } else {
+            revealEls.forEach(el => el.classList.add('in-view'));
+        }
+    </script>
+</body>
+</html>

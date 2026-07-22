@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More | Type 928 Full Specifications — YOYOS DEVICES</title>
+    <meta name="description" content="Full specifications, video walkthrough, and frequently asked questions about the Type 928 self-defense device from YOYOS DEVICES.">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #ffffff; --surface: #f5f6f8; --ink: #14171c; --ink-soft: #5b6270;
+            --navy: #10192b; --accent: #c8440f; --accent-soft: #fdeee7;
+            --success: #16794f; --success-soft: #e8f6ef; --border: #e3e5ea;
+            --font-display: 'Sora', 'Inter', sans-serif;
+            --font-body: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--ink); line-height: 1.6; }
+        img { max-width: 100%; display: block; }
+        a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+        header {
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
+            padding: 14px 0;
+            position: sticky; top: 0; z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo-section { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 40px; height: 40px; object-fit: contain; border-radius: 8px; }
+        .logo-text { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--navy); }
+        .back-link { color: var(--ink-soft); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .back-link:hover { color: var(--accent); }
+
+        .page-hero { max-width: 800px; margin: 0 auto; padding: 56px 20px 20px; text-align: center; }
+        .page-hero .eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent-soft); color: var(--accent);
+            font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 100px; margin-bottom: 18px;
+        }
+        .page-hero h1 { font-family: var(--font-display); font-size: 38px; font-weight: 800; color: var(--navy); margin-bottom: 14px; letter-spacing: -0.5px; }
+        .page-hero p { color: var(--ink-soft); font-size: 16px; max-width: 600px; margin: 0 auto; }
+
+        .video-section { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .video-frame {
+            position: relative; width: 100%; padding-top: 56.25%;
+            border-radius: 16px; overflow: hidden; border: 1px solid var(--border);
+            box-shadow: 0 16px 40px rgba(16,25,43,0.1);
+        }
+        .video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        section.block { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+        section.block h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--navy); text-align: center; margin-bottom: 36px; }
+
+        .specs-full { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+        .spec-row {
+            background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+            border-radius: 10px; padding: 18px 20px;
+        }
+        .spec-row .label { color: var(--accent); font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+        .spec-row .value { color: var(--navy); font-weight: 700; font-size: 16px; }
+        .spec-row .desc { color: var(--ink-soft); font-size: 13px; margin-top: 6px; }
+
+        .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+        .faq-item h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; font-family: var(--font-display); font-weight: 700; }
+        .faq-item p { color: var(--ink-soft); font-size: 14.5px; }
+
+        .cta-block {
+            max-width: 900px; margin: 60px auto 80px; padding: 44px 30px;
+            background: var(--navy); border-radius: 20px; text-align: center; color: #fff;
+        }
+        .cta-block h2 { font-family: var(--font-display); font-size: 26px; margin-bottom: 12px; }
+        .cta-block p { color: #c3c9d6; margin-bottom: 24px; font-size: 15px; }
+        .btn-primary {
+            background: var(--accent); color: #fff; border: none; padding: 16px 36px;
+            border-radius: 10px; font-weight: 700; font-size: 15px; cursor: pointer;
+            text-decoration: none; display: inline-block; transition: all 0.25s;
+        }
+        .btn-primary:hover { background: #a83a0c; transform: translateY(-2px); }
+
+        footer { background: var(--navy); padding: 34px 20px; text-align: center; color: #aab2c4; }
+        footer p { font-size: 13.5px; }
+        footer strong { color: #fff; }
+
+        @media (max-width: 600px) {
+            .page-hero h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-section" aria-label="YOYOS DEVICES home">
+                <img src="logo.png" alt="YOYOS DEVICES logo" class="logo-img">
+                <div class="logo-text">YOYOS DEVICES</div>
+            </a>
+            <a href="index.html" class="back-link">← Back to home</a>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="eyebrow">📘 Full product guide</div>
+        <h1>Type 928 — Everything You Need to Know</h1>
+        <p>Full specifications, a video walkthrough of how it works, and answers to the questions we get asked most.</p>
+    </section>
+
+    <section class="video-section">
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/SB0yL6tqDzA" title="Type 928 video walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section class="block">
+        <h2>Full Key Specifications</h2>
+        <div class="specs-full">
+            <div class="spec-row"><div class="label">Model</div><div class="value">Type 928</div><div class="desc">Compact self-defense stun device</div></div>
+            <div class="spec-row"><div class="label">Built-in Flashlight</div><div class="value">LED, high-lumen</div><div class="desc">Long-life LED, doubles as a torch</div></div>
+            <div class="spec-row"><div class="label">Power Source</div><div class="value">Rechargeable battery</div><div class="desc">USB-compatible charging cable included</div></div>
+            <div class="spec-row"><div class="label">Charging Time</div><div class="value">2–4 hours</div><div class="desc">Full charge from empty</div></div>
+            <div class="spec-row"><div class="label">Dimensions</div><div class="value">170 × 50 × 30 mm</div><div class="desc">Fits a jacket pocket or bag pouch</div></div>
+            <div class="spec-row"><div class="label">Weight</div><div class="value">~200g</div><div class="desc">Light enough for daily carry</div></div>
+            <div class="spec-row"><div class="label">Housing Material</div><div class="value">Aviation-grade aluminum + ABS</div><div class="desc">Durable, impact-resistant shell</div></div>
+            <div class="spec-row"><div class="label">Safety Mechanism</div><div class="value">Dual safety switch</div><div class="desc">Prevents accidental activation</div></div>
+            <div class="spec-row"><div class="label">Grip</div><div class="value">Anti-slip ribbed design</div><div class="desc">Secure hold, even with sweaty or wet hands</div></div>
+            <div class="spec-row"><div class="label">In the Box</div><div class="value">Device, charger cable, carry pouch</div><div class="desc">Plus a free pepper spray with every order</div></div>
+            <div class="spec-row"><div class="label">Delivery</div><div class="value">3–5 business days</div><div class="desc">Nationwide across Nigeria</div></div>
+            <div class="spec-row"><div class="label">Payment</div><div class="value">Collect on delivery</div><div class="desc">Pay when the order arrives</div></div>
+        </div>
+    </section>
+
+    <section class="block">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How does delivery and payment work?</h3>
+            <p>You place your order on the site with your name, phone, and delivery address. Our team calls or messages you on WhatsApp within 24 hours to confirm details, then your order ships and arrives within 3–5 business days. You pay in cash when it's delivered to you — no online payment required.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What's included with my order?</h3>
+            <p>Every order includes the Type 928 device, its charging cable, a carry pouch, and a free pepper spray canister — regardless of which package you choose.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How long does the battery last?</h3>
+            <p>A full charge takes roughly 2–4 hours and is designed to hold charge for extended periods between uses, so it's ready when you need it.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Is it legal to own where I live?</h3>
+            <p>Rules on self-defense devices can vary by state and locality in Nigeria. We'd recommend checking your local regulations before ordering so you know exactly where you stand.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I change my order after submitting?</h3>
+            <p>Yes — since our team contacts you by phone or WhatsApp to confirm before dispatch, you can adjust quantity or delivery details at that point.</p>
+        </div>
+    </section>
+
+    <div class="cta-block">
+        <h2>Ready to order?</h2>
+        <p>Nationwide delivery, free pepper spray included, pay only when it arrives.</p>
+        <a href="index.html#order" class="btn-primary">Place Your Order</a>
+    </div>
+
+    <footer>
+        <p><strong>YOYOS DEVICES</strong> &copy; 2026. All rights reserved. Premium personal security solutions.</p>
+        <p style="margin-top: 12px; font-size: 12.5px;">Email: yoyosdevices@gmail.com | Available to serve you 24/7</p>
+    </footer>
+</body>
+</html>
